@@ -9,6 +9,7 @@ from .serializers import *
 from rest_framework import generics
 from rest_framework.pagination import CursorPagination
 
+
 class ResultsPagination(CursorPagination):
     page_size = 25
     page_size_query_param = 'page_size'
@@ -16,6 +17,7 @@ class ResultsPagination(CursorPagination):
 
 # Searching is implemented using DRF Filters, 
 # Django rest framework filter by default uses [icontains] and thus the search by default supports partial searches
+
 
 class YoutubeItems(generics.ListAPIView):
     search_fields = ['title', 'description']
