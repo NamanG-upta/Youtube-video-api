@@ -11,6 +11,8 @@ This project uses celery to fetch latest videos after every 10 minutes and saves
 - Install all dependencies by using typing `pip install -r requirements.txt`.
 - Inside the `setting.py` file, fill the variable `GOOGLE_API_KEYS` with the API Keys available,the list is like this => `['API_KEY_1','API_KEY_2','API_KEY_3','API_KEY_4'...]`
 - You can get API key from [this](https://developers.google.com/youtube/v3/getting-started)
+- Run the celery `celery -A youtube_fetch_api worker -l info` , -l info provides the log level information of celery worker.
+- Run celery beat `celery -A youtube_fetch_api beat -l info`.
 - Run the server using `python mange.py runserver`
 
 ## Images
